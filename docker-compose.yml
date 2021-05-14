@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+    server: 
+
+        build: api
+
+        command: npm run start
+
+        depends_on:
+            - mongo
+        ports:
+            - 3000:3000
+
+    mongo:
+        image: mongo
+        ports: 
+            - 27017:27017
+    restore:
+        image: mongo
+        volumes:
+            - ./dump:/dump
+        links:
+            - mongo:mongo
+        command: mongorestore --host mongo:27017 /dump/
+
+    client:
+
+        build: frontend
+
+        command: npm run serve
+
+        depends_on:
+            - server
+        links: 
+            - mongo:mong
+        ports: 
+            - 8080:8080
