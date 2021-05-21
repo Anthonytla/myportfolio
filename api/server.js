@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes/experienceRoutes');
 
 mongoose.connect(
-    'mongodb://mongo:27017/myportfolio',
+    'mongodb://localhost:27017/myportfolio',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 

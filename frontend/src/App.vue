@@ -57,7 +57,7 @@
           ></button>
           <button
             class="fa fa-briefcase"
-            onclick="window.location.href='#experiences'"
+            onclick="window.location.href='#experience'"
           ></button>
           <button
             class="fa fa-book"

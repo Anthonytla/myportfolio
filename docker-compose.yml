@@ -33,6 +33,6 @@ services:
         depends_on:
             - server
         links: 
-            - mongo:mong
+            - mongo:mongo
         ports: 
             - 8080:8080
