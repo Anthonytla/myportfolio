@@ -1,25 +1,31 @@
 <template>
   <div class="list row">
     <h3 class="main-title">Projets</h3>
-    <ul class="row">
-      <li
-        class="row col-md-4 padd"
-        v-for="(project, index) in projects"
-        :key="index"
-        @click="setActiveProject(project, index)"
-      >
-        <div class="card" style="width: 18rem" v-if="project.enabled">
-          <img class="card-img-top" :src="project.picture" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">{{ project.title }}</h5>
-            <div class="card-text text">
-              {{ project.description }}
+    <div class="container">
+      <ul class="row">
+        <li
+          class="row col-md-4 padd"
+          v-for="(project, index) in projects"
+          :key="index"
+          @click="setActiveProject(project, index)"
+        >
+          <div class="card" style="width: 18rem" v-if="project.enabled">
+            <img
+              class="card-img-top"
+              :src="project.picture"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <div class="card-text text">
+                {{ project.description }}
+              </div>
             </div>
           </div>
-        </div>
-        <div v-else :id="project._id">Nothing</div>
-      </li>
-    </ul>
+          <div v-else :id="project._id">Nothing</div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 

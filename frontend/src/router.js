@@ -28,7 +28,7 @@ var router = new Router({
       component: () => import("./Admin")
     },
     {
-      path: "/myportfolio",
+      path: "/",
       name: "myportfolio",
       component: () => import("./MyPortFolio")
     },

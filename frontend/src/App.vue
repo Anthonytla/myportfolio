@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <router-link to="/myportfolio" class="navbar-brand"
+      <router-link to="/" class="navbar-brand"
         >Anthony LA</router-link
       >
       <div class="navbar-nav mr-auto">
