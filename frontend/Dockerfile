@@ -11,7 +11,6 @@ RUN npm install -g nodemon express
 
 COPY / frontend/
 WORKDIR frontend/
-EXPOSE 8080
 
 
 
