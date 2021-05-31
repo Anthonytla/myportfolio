@@ -13,8 +13,6 @@ RUN ln -T /bin/true /usr/bin/systemctl && apt-get update && apt-get install -y m
 COPY / api/
 WORKDIR api/
 
-EXPOSE 3000
-
 
 
 
